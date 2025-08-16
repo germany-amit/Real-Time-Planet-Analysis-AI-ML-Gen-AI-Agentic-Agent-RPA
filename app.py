@@ -186,7 +186,7 @@ def module_rag():
     question = st.text_input("Your question", "How does a digital twin help operations?")
 
     if st.button("Retrieve + Summarize"):
-        docs = [p.strip() for p in corpus.split("\\n") if p.strip()]
+        docs = [p.strip() for p in corpus.split("\n") if p.strip()]
 ") if p.strip()]
         hits = rag_retrieve(question, docs, top_k=3)
         if not hits:
